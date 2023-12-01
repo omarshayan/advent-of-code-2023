@@ -1,42 +1,17 @@
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-#include <deque>
-using namespace std;
+#include "deps.h"
 
-template <typename T>
-ostream& operator<<(ostream& os, const vector<T>& v)
-{
-    os << "[";
-    for (int i = 0; i < v.size(); ++i) {
-        os << v[i];
-        if (i != v.size() - 1)
-            os << ", ";
-    }
-    os << "]\n";
-    return os;
-}
+using namespace std;
 
 int main() {
 
     ifstream reader("input.txt");
     string line;
     vector<vector<int>>grid;
-    int cycle = 1;
-    int x = 1; 
-    deque<int> addxcounters;
-    deque<int> addantbuffer;
-    vector<int> signalstrengths;
     vector<string>commands;
-    while(getline(reader, line)) { commands.push_back(line);} 
+    while(getline(reader, line)) {commands.push_back(line);} 
     cout << commands << endl;
-    for(int i = 0; i < commands.size() + 2; i++) {
 
-//
-///
-        vector<string> command;
+    for(int i = 0; i < commands.size(); i++) {
         if (i < commands.size()){
             string line = commands[i];
             stringstream ss(line);
@@ -50,26 +25,8 @@ int main() {
             }
 
         }
-        while (addxcounters.front() ==2 ) { 
-            x += addantbuffer.front();
-            addantbuffer.pop_front();
-            addxcounters.pop_front();
-        }
-
-        if (cycle == 20 ||
-            cycle == 60 ||
-            cycle == 100 ||
-            cycle == 140 ||
-            cycle == 180 ||
-            cycle == 220) {
         cout << "cycle: " << cycle << "\t x: " << x << endl; 
-            signalstrengths.push_back(cycle*x);
-        }
-
-        cycle += 1;
-/*
-        cout << "cycle: " << cycle << "\t x: " << x << endl; 
-        cout << "counters\t";*/
+        cout << "counters\t";
         for (auto& c : addxcounters){
             c++;
        //     cout << c <<", ";
@@ -80,15 +37,6 @@ int main() {
         }
       //  cout << endl;
     }
-    int sum = 0;
-    for (auto i : signalstrengths) { sum += i; }
-    cout << signalstrengths << endl;
-    cout << "sum: " << sum; 
-
-
-
-    
-
-    
+    */
 }
 
