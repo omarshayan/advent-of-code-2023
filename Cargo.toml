@@ -14,3 +14,10 @@ path = "day4/star1.rs"
 [[bin]]
 name = "day4_s2"
 path = "day4/star2.rs"
+
+[[bin]]
+name = "day5_s1"
+path = "day5/star1.rs"
+[[bin]]
+name = "day5_s2"
+path = "day5/star2.rs"
