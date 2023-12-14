@@ -1,5 +1,5 @@
 [package]
-name = "advent-of-code-2023"
+name = "advent_of_code_2023"
 version = "0.1.0"
 edition = "2021"
 
@@ -49,3 +49,10 @@ path = "day9/star1.rs"
 [[bin]]
 name = "day9_s2"
 path = "day9/star2.rs"
+
+[[bin]]
+name = "day10_s1"
+path = "day10/star1.rs"
+[[bin]]
+name = "day10_s2"
+path = "day10/star2.rs"
